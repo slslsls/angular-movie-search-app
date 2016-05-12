@@ -1,0 +1,39 @@
+
+<!doctype html>
+<html lang="en" ng-app='myApp'>
+<head>
+  <meta charset="UTF-8">
+  <title>Angular Boilerplate</title>
+  <!-- styles -->
+  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="./css/main.css" rel="stylesheet" media="screen">
+</head>
+  <body>
+    <div class="container" ng-controller="ParentController">
+      <div class="search-div">
+        <form name="searchForm" ng-submit="view.search()">
+          <input class="form-control" name="searchKeyword" ng-model="view.searchKeyword" type="text" placeholder="Enter Title" ng-required="true" autocomplete="off">
+          <input class="btn btn-primary" type="submit" value="Go">
+        </form>
+      </div>
+      <section class="results-section">
+        <a ng-repeat="result in view.results" ng-click="view.results = {}" ng-href="#/{{result.imdbID}}">
+          <div class="result-div">
+            <p><strong>{{result.Title}} </strong><br />({{result.Year}})</p>
+          </div>
+        </a>
+      </section>
+      <div ng-view></div>
+    </div>
+    <!-- scripts -->
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.js" type="text/javascript"></script>
+    <script src="./js/app.js" type="text/javascript"></script>
+    <script src="./js/controllers.js" type="text/javascript"></script>
+    <script src="./js/directives.js" type="text/javascript"></script>
+    <script src="./js/filters.js" type="text/javascript"></script>
+    <script src="./js/services.js" type="text/javascript"></script>
+  </body>
+</html>

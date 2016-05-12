@@ -1,0 +1,45 @@
+.form-control {
+  max-width: 20%;
+}
+
+.search-div {
+  text-align: center;
+  border-bottom: 1px solid lightgray;
+  padding: 30px;
+}
+
+.form-control, .btn, .btn-primary {
+  display: inline-block;
+}
+
+.result-div {
+  width: 40%;
+  display: inline-block;
+  border-radius: 10px;
+  background-color: lightblue;
+  margin: 10px;
+  padding: 10px;
+  /*padding-left: 30px;*/
+}
+
+.results-section {
+  padding-top: 30px;
+  text-align: center;
+}
+
+a, a:hover, a:active, a:visited {
+  text-decoration: none;
+}
+
+.poster {
+  max-width: 25%;
+  position: absolute;
+}
+
+.indent {
+  margin-left: 30%;
+}
+
+.starring {
+  color: gray;
+}
